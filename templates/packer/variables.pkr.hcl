@@ -10,7 +10,7 @@ variable "composer_commit" {
 # Git SHA for the osbuild commit to include in the image.
 variable "osbuild_commit" {
   type    = string
-  default = "611b6846e82fe63a9a25759697f3b9ff14d9e1a9"
+  default = "f7bf23fabaae6027b1e1147b27870d90d4b1911f"
 }
 
 ##############################################################################
