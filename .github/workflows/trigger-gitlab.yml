@@ -6,8 +6,6 @@ name: Trigger GitLab CI
 on:
   pull_request_target:
   push:
-    branches:
-      - main
 
 jobs:
   pr-info:
