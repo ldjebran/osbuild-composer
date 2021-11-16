@@ -18,8 +18,8 @@ sudo dnf install -y packer ansible
 
 greenprint "🖼️ Building an image"
 
-export PKR_VAR_aws_access_key="$V2_AWS_ACCESS_KEY_ID"
-export PKR_VAR_aws_secret_key="$V2_AWS_SECRET_ACCESS_KEY"
+export PKR_VAR_aws_access_key="$PACKER_AWS_ACCESS_KEY_ID"
+export PKR_VAR_aws_secret_key="$PACKER_AWS_SECRET_ACCESS_KEY"
 export PKR_VAR_image_name="osbuild-composer-worker-$CI_COMMIT_SHA"
 export PKR_VAR_composer_commit="$CI_COMMIT_SHA"
 
