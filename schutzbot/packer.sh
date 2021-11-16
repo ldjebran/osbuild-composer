@@ -7,9 +7,14 @@ function greenprint {
   echo -e "\033[1;32m[$(date -Isecond)] ${1}\033[0m"
 }
 
-greenprint "📦 Installing packer"
+greenprint "📦 Installing epel"
+sudo dnf install -y epel-release
+
+greenprint "📦 Installing hashicorp repo"
 sudo curl --location --output /etc/yum.repos.d/hashicorp.repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-sudo dnf install -y packer
+
+greenprint "📦 Installing packer and ansible"
+sudo dnf install -y packer ansible
 
 greenprint "🖼️ Building an image"
 
